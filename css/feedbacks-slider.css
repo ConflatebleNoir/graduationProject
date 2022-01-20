@@ -1,0 +1,243 @@
+.feedbacks__wrapper
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 30px 0;
+    max-width: 92%;
+    width: 100%;
+}
+
+.wrapper__arrows
+{
+    max-width: 105px;
+    width: 100%;
+    position: relative;
+}
+
+.feedbacks__slider
+{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 10px auto;
+    min-width: 0;
+}
+
+.feedbacks__slider .slider__item
+{
+    max-width: 16.7%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    box-shadow: 0 0 8px 2px rgba(102, 100, 100, 40%);
+    border-radius: 5px;
+}
+
+.feedbacks__slider .slider__item
+{
+    cursor: grab;
+}
+
+.feedback__wrapper
+{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px 25px 20px;    
+} 
+
+.feedback__date
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.date
+{
+    font: 12px/18px 'Gilroy', sans-serif;
+    color: #8C8C8C;
+}
+
+.feedback__information
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.feedbacks__slider .information__photo
+{
+    margin-bottom: 10px;
+}
+
+.feedbacks__slider .information__name
+{
+    font: 500 18px/27px 'Gilroy', sans-serif;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.feedbacks__slider .information__function
+{
+    font: 14px/20px 'Gilroy', sans-serif;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.feedbacks__slider .feedback__coworking
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feedbacks__slider .coworking__type
+{
+    margin-bottom: 15px;
+}
+
+.feedbacks__slider .text
+{
+    font: 14px/20px 'Gilroy', sans-serif;
+    color: #1883FF;
+}
+
+.feedbacks__slider .coworking__evaluation
+{
+    margin-bottom: 15px;
+}
+
+.feedbacks__slider .coworking__feedback
+{
+    max-width: 251px;
+    width: 100%;
+    font: 14px/21px 'Gilroy', sans-serif;
+    color: #000;
+}
+
+
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list
+{
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.feedbacks__slider .slick-track
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/* Main slider */
+
+.feedbacks__slider
+{
+    position: relative;
+}
+
+.wrapper__arrows .slick-arrow
+{
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    font-size: 0;
+    max-width: 45px;
+    width: 100%;
+    height: 21px;
+    cursor: pointer;
+}
+
+.wrapper__arrows .slick-arrow.slick-prev
+{
+    left: -56px;
+    background: url(../images/feedback-right_arrow.svg) 0 0 / 100% no-repeat;
+    margin-left: 25px;
+    z-index: 100;
+    transform: rotate(180deg);
+}
+
+.wrapper__arrows .slick-arrow.slick-next
+{
+    right: 0;
+    background: url(../images/feedback-right_arrow.svg) 0 0 / 100% no-repeat;
+    margin-right: 25px;
+    z-index: 100;
+}
+
+.wrapper__arrows .slick-dots
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wrapper__arrows .slick-dots li
+{
+    list-style: none;
+}
+
+.wrapper__arrows .slick-dots button
+{
+    font-size: 0;
+    width: 225px;
+    height: 2px;
+    background-color: #8C8C8C;
+}
+
+.wrapper__arrows .slick-dots li.slick-active button
+{
+    background-color: #1883FF;
+}
+
+.wrapper__arrows .slick-arrow.slick-prev.slick-disabled
+{
+    background: url(../images/feedback-left_arrow-dis.svg) no-repeat;
+    transform: rotate(0);
+}
+
+.wrapper__arrows .slick-arrow.slick-next.slick-disabled
+{
+    background: url(../images/feedback-left_arrow-dis.svg) no-repeat;
+    transform: rotate(-180deg);
+}

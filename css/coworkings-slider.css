@@ -1,0 +1,433 @@
+.coworkings__wrapper
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    max-width: 840px;
+    width: 100%;
+}
+
+.description__wrapper
+{
+    display: flex;
+    flex-direction: column;
+    min-width: 410px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 18px 2px rgba(102, 100, 100, 40%);
+}
+
+/* gallery slider-styles start */
+.item__gallery-slider
+{
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+}
+
+.item__gallery-slider .gallery__wrapper
+{
+    max-width: 25%;
+    width: 100%;
+    min-width: 0;
+    cursor: grab;
+    position: relative;
+}
+
+.gallery__photo
+{    
+    width: 100%;
+}
+
+/* Клик-анклик по сердцу */
+
+.gallery__favorite
+{
+    position: absolute;
+    z-index: 999;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.gallery__favorite.active
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+}
+
+.favorite__heart
+{
+    max-width: 25px;
+    width: 100%;
+}
+
+.gallery__favorite-checked.active
+{
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+    top: 22px;
+    right: 25px;
+    width: 15px;
+    height: 15px;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: .2s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery__favorite-checked
+{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    top: 22px;
+    right: 25px;
+}
+
+.favorite-checked
+{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.favorite-checked::after,
+.favorite-checked::before
+{
+    content : '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.favorite-checked::before
+{
+    top: -7px;
+    left: 0;
+}
+
+.favorite-checked::after
+{
+    top: 0;
+    left: -7px;
+}
+
+/* gallery sldier-styles end */
+
+.item__space
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 15px 25px 10px;
+}
+
+.space__text
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.text__top
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.top__info
+{
+    font: 12px/18px 'Gilroy', sans-serif;
+    color: #8C8C8C;
+}
+
+.text__coworking
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.coworking__heading
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.heading__title
+{
+    font: 500 24px/36px 'Gilroy', sans-serif;
+    color: #000;
+}
+
+.heading__street-name
+{
+    font: 16px/24px 'Gilroy', sans-serif;
+    color: #000;
+}
+
+.coworking__location
+{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.location__item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.item__station-label
+{
+    margin-right: 9px;
+}
+
+.item__station-name
+{
+    font: 14px/20px 'Gilroy', sans-serif;
+    color: #000;
+    margin-right: 10px;
+}
+
+.item__station-walking
+{
+    margin-right: 5px;
+}
+
+.item__station-time
+{
+    font: 14px/20px 'Gilroy', sans-serif;
+    color: #8C8C8C;
+}
+
+.wrapper__arrows-coworkings
+{
+    max-width: 105px;
+    width: 100%;
+    position: relative;
+}
+
+.coworkings__slider
+{
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0 auto 40px auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.coworkings__slider .slider__item
+{
+    max-width: 25%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    box-shadow: 0 0 10px 2px rgba(102, 100, 100, 70%);
+    min-width: 0;
+    cursor: grab;
+    margin: 10px;
+}
+
+.wrapper__space
+{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px 25px 20px;    
+} 
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list
+{
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.coworkings__slider .slick-track
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/* Coworkings slider start */
+
+.coworkings__slider
+{
+    position: relative;
+}
+
+.wrapper__arrows-coworkings .slick-arrow
+{
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    font-size: 0;
+    max-width: 45px;
+    width: 100%;
+    height: 21px;
+    cursor: pointer;
+}
+
+.wrapper__arrows-coworkings .slick-arrow.slick-prev
+{
+    left: -56px;
+    background: url(../images/feedback-right_arrow.svg) 0 0 / 100% no-repeat;
+    margin-left: 25px;
+    z-index: 100;
+    transform: rotate(180deg);
+}
+
+.wrapper__arrows-coworkings .slick-arrow.slick-next
+{
+    right: 0;
+    background: url(../images/feedback-right_arrow.svg) 0 0 / 100% no-repeat;
+    margin-right: 25px;
+    z-index: 100;
+}
+
+.wrapper__arrows-coworkings .slick-dots
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wrapper__arrows-coworkings .slick-dots li
+{
+    list-style: none;
+}
+
+.wrapper__arrows-coworkings .slick-dots button
+{
+    font-size: 0;
+    width: 225px;
+    height: 2px;
+    background-color: #8C8C8C;
+}
+
+.wrapper__arrows-coworkings .slick-dots li.slick-active button
+{
+    background-color: #1883FF;
+}
+
+.wrapper__arrows-coworkings .slick-arrow.slick-prev.slick-disabled
+{
+    background: url(../images/feedback-left_arrow-dis.svg) no-repeat;
+    transform: rotate(0);
+}
+
+.wrapper__arrows-coworkings .slick-arrow.slick-next.slick-disabled
+{
+    background: url(../images/feedback-left_arrow-dis.svg) no-repeat;
+    transform: rotate(-180deg);
+}
+/* coworkings slider end */
+
+/* Gallery slider */
+
+.item__gallery-slider
+{
+    position: relative;
+}
+
+.item__gallery-slider .slick-dots
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 12px;
+    left: 17px;
+    max-width: 89.25%;
+    width: 100%;
+}
+
+
+.item__gallery-slider .slick-dots li
+{
+    list-style: none;
+    max-width: 100%;
+    width: 100%;
+    
+}
+
+.item__gallery-slider .slick-dots button
+{
+    font-size: 0;
+    max-width: 90%;
+    width: 100%;
+    height: 3px;
+    background-color: #8C8C8C;
+    opacity: 0.6;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.item__gallery-slider .slick-dots li.slick-active button
+{
+    background-color: #1883FF;
+    opacity: 1;
+}
