@@ -133,6 +133,30 @@
     {
         max-width: 42%;
     }
+
+    .footer__scrollup
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .under__wrapper_about,
+    .under__wrapper_towns,
+    .under__wrapper_info,
+    .under__wrapper_connection
+    {
+        max-width: 50%;
+        width: 100%;
+    }
+    
+    .under__wrapper_about,
+    .under__wrapper_towns
+    {
+        height: 267px;
+        border-bottom: 2px solid #0068E1;
+        margin-bottom: 20px;
+        justify-content: normal;
+    }
 }
 
 @media screen and (max-width: 1001px)
@@ -241,13 +265,6 @@
         margin-bottom: 20px;
     }
 
-    .under__wrapper_about,
-    .under__wrapper_towns
-    {
-        height: 267px;
-        border-bottom: 2px solid #0068E1;
-    }
-
     .wrapper__button_form
     {
         max-width: 50%;
@@ -281,6 +298,7 @@
         padding: 18px 10px;
         height: 564px;
         justify-content: normal;
+        border-radius: 5px;
     }
 
     .menu__item
@@ -431,6 +449,27 @@
         margin-bottom: 80px;
     }
 
+    .info__feedbacks
+    {
+        align-items: center;
+    }
+
+    .feedbacks__button
+    {
+        max-width: 100%;
+    }
+
+    .button__share
+    {
+        max-width: 98%;
+    }
+
+    .wrapper__arrows-coworkings
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     .feedbacks__wrapper
     {
         max-width: 100%;
@@ -440,6 +479,17 @@
     {
         opacity: 0;
         visibility: hidden;
+    }
+
+    .info__coworkings
+    {
+        align-items: center;
+    }
+
+    .coworkings__button
+    {
+        max-width: 100%;
+        justify-content: center;
     }
 }
 
@@ -876,9 +926,15 @@
         font: 14px/21px 'Gilroy', sans-serif;
     }
 
+    .feedbacks__button
+    {
+        max-width: 100%;
+    }
+
     .info__feedbacks
     {
         margin-bottom: 80px;
+        align-items: center;
     }
 
     .info__coworkings
