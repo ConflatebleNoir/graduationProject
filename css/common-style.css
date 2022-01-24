@@ -19,6 +19,7 @@
     max-width: 100%;
     background-color: #fff;
     padding: 20px 0;
+    transition: .3s;
 }
 
 .header__container
@@ -51,7 +52,8 @@
     flex-direction: row;
     align-items: center;
     width: 50%;
-    justify-content: space-between;
+    justify-content: space-between;    
+    overflow: auto;
 }
 
 .menu__back
@@ -69,8 +71,8 @@
 
 .menu__item:hover
 {
-    font-size: 15px;
-    transition: .3s;
+    font-size: 16px;
+    transition: .5s;
 }
 
 .header__number
@@ -84,8 +86,8 @@
 
 .header__number:hover
 {
-    font-size: 15px;
-    transition: .3s;
+    font-size: 16px;
+    transition: .5s;
 }
 
 .header__icons
@@ -113,6 +115,7 @@
 {
     max-width: 100%;
     background-color: #fafafa;
+    transition: .3s;
 }
 
 .main__container
@@ -295,10 +298,8 @@
 
 .btn:hover
 {
-    border: 2px solid #1883FF;
-    background: transparent;
+    background: #034ea5;
     border-radius: 5px;
-    color: #001E42;
     transition: all ease .3s;
 }
 
@@ -1205,6 +1206,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: #0358BB;
+    transition: .3s;
 }
 
 .footer__container
@@ -1545,4 +1547,30 @@ input::-webkit-input-placeholder { color: #4B91D2; }
   left: 100px;
   display: none;
   background: no-repeat;
+  transition: .3;
+}
+
+.footer__scrollup:hover
+{
+    opacity: 1;
+    transition: .3s;
+}
+
+.scroll__up
+{
+    width: 40px;
+    height: 40px;
+}
+
+.footer:hover
+{
+    
+}
+
+.header.active,
+.main.active,
+.footer.active
+{
+    background-color: rgba(0, 0, 0, 0.383);
+    transition: .3s;
 }

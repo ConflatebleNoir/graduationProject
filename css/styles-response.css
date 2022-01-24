@@ -50,7 +50,7 @@
 
     .wrapper__button_form
     {
-        max-width: 32%;
+        max-width: 37%;
     }
 }
 
@@ -237,7 +237,7 @@
 
     .wrapper__button_form
     {
-        max-width: 36%;
+        max-width: 50%;
         width: 100%;
     }
 }
@@ -490,6 +490,11 @@
     {
         max-width: 100%;
         justify-content: center;
+    }
+
+    .body.lock
+    {
+        overflow: hidden;
     }
 }
 
@@ -805,12 +810,12 @@
 
     .chevron-down
     {
-        transition: .4s;
+        transition: .2s;
     }
     .chevron-down.active
     {
         transform: rotate(180deg);
-        transition: .4s;
+        transition: .2s;
     }
 
     .buttons__list

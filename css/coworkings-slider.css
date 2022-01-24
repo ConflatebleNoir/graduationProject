@@ -33,12 +33,12 @@
     width: 100%;
     min-width: 0;
     cursor: grab;
-    position: relative;
 }
 
 .gallery__photo
 {    
     width: 100%;
+    border-radius: 5px;
 }
 
 /* Клик-анклик по сердцу */
@@ -99,7 +99,7 @@
 {
     width: 15px;
     height: 15px;
-    background-color: red;
+    background-color: #1883FF;
     transform: rotate(45deg);
     position: relative;
 }
@@ -111,7 +111,7 @@
     display: block;
     width: 15px;
     height: 15px;
-    background-color: red;
+    background-color: #1883FF;
     border-radius: 50%;
     position: absolute;
 }
@@ -137,6 +137,7 @@
     flex-direction: column;
     background-color: #fff;
     padding: 10px 15px 25px 10px;
+    border-radius: 5px;
 }
 
 .space__text
@@ -254,6 +255,8 @@
     min-width: 0;
     cursor: grab;
     margin: 10px;
+    border-radius: 5px;
+    position: relative;
 }
 
 .wrapper__space
