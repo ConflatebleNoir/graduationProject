@@ -52,6 +52,11 @@
     {
         max-width: 37%;
     }
+
+    .registration__popup
+    {
+        max-width: 31.4%;
+    }
 }
 
 @media screen and (max-width: 1201px) 
@@ -69,6 +74,11 @@
     .footer__scrollup
     {
         left: 50px;
+    }
+
+    .registration__popup
+    {
+        max-width: 36.7%;
     }
 }
 
@@ -157,6 +167,11 @@
         margin-bottom: 20px;
         justify-content: normal;
     }
+
+    .registration__popup
+    {
+        max-width: 40%;
+    }
 }
 
 @media screen and (max-width: 1001px)
@@ -164,7 +179,7 @@
     .header__container
     {
         max-width: 100%;
-        margin: 0 20px 0 20px;
+        margin: 0 20px;
     }
 
     .main__container
@@ -240,6 +255,11 @@
         max-width: 50%;
         width: 100%;
     }
+
+    .registration__popup
+    {
+        max-width: 44%;
+    }
 }
 
 @media screen and (max-width: 999px)
@@ -276,6 +296,12 @@
     {
         margin: 0;
     }
+
+    .registration__popup
+    {
+        max-width: 62.5%;
+        left: 20%;
+    }
 }
 
 @media screen and (max-width: 801px)
@@ -296,7 +322,7 @@
         max-width: 100%;
         width: 100%;
         padding: 18px 10px;
-        height: 564px;
+        height: 100vh;
         justify-content: normal;
         border-radius: 5px;
     }
@@ -500,6 +526,11 @@
 
 @media screen and (max-width: 641px)
 {
+    .header__container
+    {
+        margin: 0 10px;
+    }
+
     .logo
     {
         max-width: 64px;
@@ -626,6 +657,10 @@
 
 @media screen and (max-width: 639px)
 {
+    .header__container
+    {
+        margin: 0 10px;
+    }
     .main__info
     {
         margin-top: 15px;
@@ -639,7 +674,7 @@
     .header__icons
     {
         justify-content: space-between;
-        width: 40%;
+        width: 35%;
     }
 
     .header__hamburger.active::before
@@ -1007,6 +1042,12 @@
         padding-bottom: 25px;
         border-bottom: 2px solid #0068E1;
         margin-bottom: 20px;
+    }
+
+    .registration__popup
+    {
+        max-width: 93.75%;
+        left: 10px;
     }
 }
 

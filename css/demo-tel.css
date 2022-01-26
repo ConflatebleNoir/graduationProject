@@ -24,8 +24,8 @@ pre {
 
 input{
   margin: 0;
-  padding: 6px 12px;
-  border-radius: 2px;
+  padding: 12px 24px;
+  border-radius: 5px;
   font-family: inherit;
   font-size: 100%;
   color: inherit; }

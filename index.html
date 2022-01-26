@@ -19,8 +19,6 @@
 
 </head>
 
-
-
 <body id="body" class="body">
     <header id="header" class="header">
         <div class="header__container">
@@ -45,7 +43,7 @@
                 <div class="icons__wrapper heart">
                     <img src="images/heart.svg" alt="" class="icon">
                 </div>
-                <div class="icons__wrapper">
+                <div id="registration-login" class="icons__wrapper">
                     <img src="images/user.svg" alt="" class="icon">
                 </div>
                 <div id="burger" class="icons__wrapper header__hamburger">
@@ -1172,8 +1170,10 @@
                 </div>
             </div>
             <div class="main__map">
-                <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A22966b1597e5be6fda077e8f9dd6fbf0ec26a96ca2da3972e63589dc125a009e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true;"></script>
+                <div class="map__wrapper">
+                    <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A22966b1597e5be6fda077e8f9dd6fbf0ec26a96ca2da3972e63589dc125a009e&amp;width=100%&amp;height=100vh&amp;lang=ru_RU&amp;scroll=true;"></script>
+                </div>
             </div>
         </div>
     </main>
@@ -1252,7 +1252,7 @@
                         <h6 class="form__title">
                             Подключитесь прямо сейчас
                         </h6>
-                        <form class="footer__form" id="footer__form" autocomplete="on" method="get">
+                        <form class="footer__form" id="footer__form" autocomplete="on" method="post">
                             <label for="form__name"></label>
                             <input class="form__item" id="form__name" type="text" placeholder="Ваше имя" required>
                             <label for="form__email"></label>
@@ -1300,20 +1300,69 @@
         </div>
     </footer>
 
+    <div id="registration_background" class="wrapper__registration">
+        <section id="registration-popup" class="registration__popup">
+            <div class="popup__container">
+                <div class="popup__heading">
+                    <div class="popup__back-mobile">
+                        <img src="images/chevron-back.svg" alt="" class="back__icon">
+                        <p class="back__label">Назад</p>
+                    </div>
+                    <h4 class="popup__title">Подключиться</h4>
+                    <p id="popup-switcher" class="popup__switcher">Войти</p>
+                </div>
+                <form class="popup__form registration" id="login_form" autocomplete="on" method="post">
+                    <label for="registration__name"></label>
+                    <input class="registration__item" id="registration__name" type="text" placeholder="Ваше имя"
+                        required>
+                    <label for="registration__email"></label>
+                    <input class="registration__item" id="registration__email" type="email" placeholder="E-mail"
+                        required>
+                    <input class="registration__item form__item" id="registration-phone" type="tel"
+                        name="registration-phone" required>
+                    <div id="rotator-registration-form" class="registration__item_wrapper">
+                        <select class="registration__item select" name="reach">
+                            <option class="registration__item_drop" value="howToReach" disabled selected>
+                                Как с вами связаться ?
+                            </option>
+                            <option class="registration__item_drop" value="phoneCall">Позвонить по номеру телефона
+                            </option>
+                            <option class="registration__item_drop" value="email">Письмо на почту</option>
+                            <option class="registration__item_drop" value="whatsApp">Сообщение на WhatsApp</option>
+                            <option class="registration__item_drop" value="telegram">Сообщение на Telegram</option>
+                        </select>
+                        <img id="rotator-item-registration" class="select__arrow" src="images/chevron-down-popup.svg"
+                            alt="arrow">
+                    </div>
+                    <div class="registration__checkbox">
+                        <input id="checkbox" type="checkbox" class="checkbox">
+                        <label for="checkbox" class="checkbox__text">
+                            Нажимая на кнопку «Подключиться», вы принимаете условия Пользовательского Соглашения и
+                            Политики
+                            Конфиденциальности
+                        </label>
+                    </div>
+                    <button class="registration__submit" type="submit">Подключиться</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/intlTelInput.min.js"></script>
     <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/international_tel.js"></script>
+    <script src="js/international_tel_footer.js"></script>
+    <script src="js/international_tel_registration.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/hider.js"></script>
     <script src="js/coworkings-hearts.js"></script>
     <script src="js/sliders.js"></script>
     <script src="js/formats-swicher.js"></script>
     <script src="js/burger.js"></script>
-    <script src="js/form-rotator.js"></script>
+    <script src="js/rotators.js"></script>
     <script src="js/arrow-back.js"></script>
+    <script src="js/popups.js"></script>
 
 </body>
 

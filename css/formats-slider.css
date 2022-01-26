@@ -14,7 +14,7 @@
     display: flex;
     min-width: 0;
     border-radius: 5px;
-
+    justify-content: space-between;
 }
 
 .slider__item
@@ -25,6 +25,8 @@
 .formats__slider_smalltop .slider__item
 {
     cursor: pointer;
+    display: flex;
+    max-width: 33%;
 }
 
 .formats__slider_bigtop .slider__item

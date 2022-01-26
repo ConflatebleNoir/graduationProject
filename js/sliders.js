@@ -1,3 +1,5 @@
+'use strict'
+
 // main_slider script start
 
 $(document).ready(function () {
