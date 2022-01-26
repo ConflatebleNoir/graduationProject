@@ -784,7 +784,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="feedbacks__button">
+                    <div id="feedback-popup-opener" class="feedbacks__button">
                         <button class="button__share btn">Оставить отзыв</button>
                     </div>
                 </div>
@@ -1302,16 +1302,16 @@
 
     <div id="registration_background" class="wrapper__registration">
         <section id="registration-popup" class="registration__popup">
-            <div class="popup__container">
+            <div id="registration-container" class="popup__container">
                 <div class="popup__heading">
-                    <div class="popup__back-mobile">
-                        <img src="images/chevron-back.svg" alt="" class="back__icon">
+                    <div id="registration-back" class="popup__back-mobile">
+                        <img src="images/chevron-back.svg" alt="" class="back__icon_popup">
                         <p class="back__label">Назад</p>
                     </div>
                     <h4 class="popup__title">Подключиться</h4>
-                    <p id="popup-switcher" class="popup__switcher">Войти</p>
+                    <p id="popup-switcher-registration" class="popup__switcher">Войти</p>
                 </div>
-                <form class="popup__form registration" id="login_form" autocomplete="on" method="post">
+                <form class="popup__form registration" id="registration_form" autocomplete="on" method="post">
                     <label for="registration__name"></label>
                     <input class="registration__item" id="registration__name" type="text" placeholder="Ваше имя"
                         required>
@@ -1335,14 +1335,123 @@
                             alt="arrow">
                     </div>
                     <div class="registration__checkbox">
-                        <input id="checkbox" type="checkbox" class="checkbox">
-                        <label for="checkbox" class="checkbox__text">
+                        <input id="registration-checkbox" type="checkbox" class="checkbox">
+                        <label for="registration-checkbox" class="checkbox__text">
                             Нажимая на кнопку «Подключиться», вы принимаете условия Пользовательского Соглашения и
                             Политики
                             Конфиденциальности
                         </label>
                     </div>
                     <button class="registration__submit" type="submit">Подключиться</button>
+                </form>
+            </div>
+            <div id="login-container" class="popup__container_login">
+                <div class="popup__heading">
+                    <div class="popup__back-mobile">
+                        <img src="images/chevron-back.svg" alt="" class="back__icon">
+                        <p class="back__label">Назад</p>
+                    </div>
+                    <h4 class="popup__title">Войти</h4>
+                    <p id="popup-switcher-login" class="popup__switcher">Подключиться</p>
+                </div>
+                <form class="popup__form login" id="login_form" autocomplete="on" method="post">
+                    <label for="login__name"></label>
+                    <input class="login__item" id="login__name" type="text" placeholder="Логин или номер телефона"
+                        required>
+                    <label for="login__email"></label>
+                    <input class="login__item" id="login__email" type="password" placeholder="Пароль" required>
+                    <div class="login__checkbox">
+                        <input id="login-checkbox" type="checkbox" class="checkbox">
+                        <label for="login-checkbox" class="checkbox__text">
+                            Запомнить пароль?
+                        </label>
+                    </div>
+                    <button class="login__submit" type="submit">Войти</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div id="feedback_background" class="wrapper__registration">
+        <section id="feedback-popup" class="feedback__popup">
+            <div class="feedback__container">
+                <form class="feedback__form" id="feedback_form" autocomplete="on" method="post">
+                    <div class="form__heading">
+                        <div id="feedback-back" class="popup__back-mobile">
+                            <img src="images/chevron-back.svg" alt="" class="back__icon_popup">
+                            <p class="back__label">Назад</p>
+                        </div>
+                        <h4 class="popup__title">Отзывы</h4>
+                        <label for="feedback-reset"></label>
+                        <button id="feedback-reset" class="feedback__reset reset__button" type="reset">Сбросить</button>
+                    </div>
+                    <div class="form__rate">
+                        <div class="rate__title">
+                            <h4 class="title">Ваша оценка</h4>
+                        </div>
+                        <div class="rate__star">
+                            <div id="form-rate-star-first" class="star__keeper"></div>
+                            <div id="form-rate-star-second" class="star__keeper"></div>
+                            <div id="form-rate-star-third" class="star__keeper"></div>
+                            <div id="form-rate-star-fourth" class="star__keeper"></div>
+                            <div id="form-rate-star-fifth" class="star__keeper"></div>
+                        </div>
+                    </div>
+                    <div class="form__info">
+                        <div class="info__holder">
+                            <div class="holder__item">
+                                <label for="for-name"></label>
+                                <input id="for-name" type="text" class="item__input" placeholder="Ваше имя" required>
+                                <label for="position-in-company"></label>
+                                <input id="for-position-in-company" type="text" class="item__input"
+                                    placeholder="Должность">
+                                <label for="for-company"></label>
+                                <input id="for-company" type="text" class="item__input" placeholder="Компания" required>
+                            </div>
+                            <div class="holder__item">
+                                <div id="coworking-feedback-container" class="holder__item_wrapper">
+                                    <select class="item__input select" name="coworking">
+                                        <option class="item__input_drop" value="coworkingHolder" disabled selected>
+                                            Коворкинг
+                                        </option>
+                                        <option class="item__input_drop" value="gravitySpace">Коворкинг «Gravity Space»
+                                        </option>
+                                        <option class="item__input_drop" value="AtWork">Коворкинг «AtWork»</option>
+                                        <option class="item__input_drop" value="lampa">Коворкинг «Лампа»
+                                        </option>
+                                        <option class="item__input_drop" value="oakBotanika">Коворкинг «ОАК Botanika
+                                            24»
+                                        </option>
+                                    </select>
+                                    <img id="rotator-item-holder-coworking" class="select__arrow"
+                                        src="images/chevron-down-popup.svg" alt="arrow">
+                                </div>
+                                <div id="format-feedback-container" class="holder__item_wrapper">
+                                    <select class="item__input select" name="format">
+                                        <option class="item__input_drop" value="formatOfWork" disabled selected>
+                                            Формат рабочего места
+                                        </option>
+                                        <option class="item__input_drop" value="unfixed">
+                                            Нефиксированное место
+                                        </option>
+                                        <option class="item__input_drop" value="meetingRoom">
+                                            Переговорная комната
+                                        </option>
+                                    </select>
+                                    <img id="rotator-item-holder-format" class="select__arrow"
+                                        src="images/chevron-down-popup.svg" alt="arrow">
+                                </div>
+                                <label for="for-contact"></label>
+                                <input id="for-contact" type="text" class="item__input"
+                                    placeholder="Ссылка на соц. сеть">
+                            </div>
+                        </div>
+                        <label for="feedback-textarea">
+                            <textarea name="Отзыв" id="feedback-textarea" cols="30" rows="10" class="info__textarea"
+                                placeholder="Отзыв" required></textarea>
+                        </label>
+                    </div>
+                    <button class="feedback__submit" type="submit">Оставить отзыв</button>
                 </form>
             </div>
         </section>
@@ -1362,6 +1471,7 @@
     <script src="js/burger.js"></script>
     <script src="js/rotators.js"></script>
     <script src="js/arrow-back.js"></script>
+    <script src="js/rate-stars.js"></script>
     <script src="js/popups.js"></script>
 
 </body>

@@ -21,3 +21,25 @@ if (rotatorRegistrationForm) {
         rotatorItemRegistrationForm.classList.toggle('active');
     });
 };
+
+//feedback coworkings form rotator
+
+const rotatorFeedbackCoworkingForm = document.getElementById('coworking-feedback-container');
+const rotatorFeedbackCoworking = document.getElementById('rotator-item-holder-coworking');
+
+if (rotatorFeedbackCoworkingForm) {
+    rotatorFeedbackCoworkingForm.addEventListener("click", function () {
+        rotatorFeedbackCoworking.classList.toggle('active');
+    });
+};
+
+// feedback format form rotator
+
+const rotatorFeedbackFormatForm = document.getElementById('format-feedback-container');
+const rotatorFeedbackFormat = document.getElementById('rotator-item-holder-format');
+
+if (rotatorFeedbackFormatForm) {
+    rotatorFeedbackFormatForm.addEventListener("click", function () {
+        rotatorFeedbackFormat.classList.toggle('active');
+    });
+};

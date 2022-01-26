@@ -302,6 +302,17 @@
         max-width: 62.5%;
         left: 20%;
     }
+
+    .popup__title
+    {
+        font: 14px/20px 'Gilroy', sans-serif;
+    }
+
+    .popup__switcher,
+    .popup__switcher:hover
+    {
+        font: 12px/18px 'Gilroy', sans-serif;
+    }
 }
 
 @media screen and (max-width: 801px)
@@ -517,11 +528,6 @@
         max-width: 100%;
         justify-content: center;
     }
-
-    .body.lock
-    {
-        overflow: hidden;
-    }
 }
 
 @media screen and (max-width: 641px)
@@ -679,7 +685,7 @@
 
     .header__hamburger.active::before
     {
-        top: 49%;
+        top: 45%;
         transform: rotate(-45deg) translate(0, -50%);        
         background-color: #8C8C8C;
     }
@@ -1048,6 +1054,22 @@
     {
         max-width: 93.75%;
         left: 10px;
+    }
+
+    .popup__back-mobile
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font: 12px/20px 'Gilroy', sans-serif;
+        color: #1883FF;
+    }
+
+    .back__icon_popup
+    {
+        margin-right: 5px;
+        width: 6px;
+        height: 11px;
     }
 }
 

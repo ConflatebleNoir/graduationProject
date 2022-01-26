@@ -16,6 +16,11 @@
     max-width: 100%;
 }
 
+.body.lock
+{
+    overflow: hidden;
+}
+
 .header
 {
     max-width: 100%;
@@ -1603,7 +1608,7 @@ input::-webkit-input-placeholder
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.8);
     z-index: 15000;
 }
 
@@ -1611,6 +1616,7 @@ input::-webkit-input-placeholder
 {
     opacity: 1;
     visibility: visible;
+    overflow: hidden;
 }
 
 .registration__popup
@@ -1618,7 +1624,7 @@ input::-webkit-input-placeholder
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    top: 25%;
+    top: 15%;
     left: 35%;
     max-width: 27.5%;
     width: 100%;
@@ -1635,11 +1641,24 @@ input::-webkit-input-placeholder
     transition: .2s;
 }
 
-.popup__container
+.popup__container,
+.popup__container_login
 {
     max-width: 86%;
     width: 100%;
     margin: 0 auto;
+}
+
+.popup__container_login,
+.popup__container.hide
+{
+    display: none;
+}
+
+.popup__container,
+.popup__container_login.active
+{
+    display: block;
 }
 
 .popup__heading
@@ -1702,7 +1721,8 @@ input::-webkit-input-placeholder
     cursor: pointer;
 }
 
-.registration__item
+.registration__item,
+.login__item
 {
     font: 14px/20px 'Gilroy', sans-serif;
     max-width: 100%;
@@ -1719,23 +1739,27 @@ input::-webkit-input-placeholder
     z-index: 13;
 }
 
-.registration__item:focus
+.registration__item:focus,
+.login__item:focus
 {
     border-color: #0358BB;
     transition: .2s;
 }
 
-.registration__item::-moz-placeholder
+.registration__item::-moz-placeholder,
+.login__item::-moz-placeholder
 {
     color: #8C8C8C;
 }
 
-.registration__item::-webkit-input-placeholder
+.registration__item::-webkit-input-placeholder,
+.login__item::-webkit-input-placeholder
 {
     color: #8C8C8C;
 }
 
-.registration__item:last-child
+.registration__item:last-child,
+.login__item:last-child
 {
     margin: 0;
 }
@@ -1757,7 +1781,8 @@ input::-webkit-input-placeholder
     transition: .2s;
 }
 
-.registration__checkbox
+.registration__checkbox,
+.login__checkbox
 {
     max-width: 100%;
     width: 100%;
@@ -1783,7 +1808,9 @@ input::-webkit-input-placeholder
     cursor: pointer;
 }
 
-.registration__submit
+.registration__submit,
+.login__submit,
+.feedback__submit
 {
     font: 14px/21px 'Gilroy', sans-serif;
     color: #fff;
@@ -1793,4 +1820,262 @@ input::-webkit-input-placeholder
     margin-bottom: 30px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.feedback__popup
+{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    max-width: 40%;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.feedback__popup.active
+{
+    opacity: 1;
+    visibility: visible;
+    transition: .2s;
+}
+
+.feedback__container
+{
+    display: flex;
+    max-width: 90.7%;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.feedback__form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.form__heading
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.reset__button
+{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.feedback__reset
+{
+    font: 12px/18px 'Gilroy', sans-serif;
+    color: #8C8C8C;
+    transition: .3s;
+}
+
+.feedback__reset:hover
+{
+    color: #000;
+    transition: .3s;
+    font-size: 14px;
+}
+
+.form__rate
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.rate__title
+{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rate__title .title
+{
+    font: 18px/27px 'Gilroy', sans-serif;
+    color: #8C8C8C;
+    margin-bottom: 10px;
+}
+
+.rate__star
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 37%;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.star__keeper
+{
+    max-width: 14.3%;
+    width: 100%;
+    height: 30px;
+    background: url(../images/nonfilled_star.svg) no-repeat;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.star__keeper:hover
+{
+    background: url(../images/filled_star.svg) no-repeat;
+    opacity: .7;
+    transition: .2s;
+}
+
+.star__keeper.active
+{
+    background: url(../images/filled_star.svg) no-repeat;
+}
+
+.form__info
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.info__holder
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.holder__item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 48%;
+    width: 100%;
+}
+
+.holder__item_wrapper
+{
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.item__input
+{
+    font: 14px/20px 'Gilroy', sans-serif;
+    max-width: 100%;
+    width: 100%;
+    border: 1.5px solid #C4C4C4;
+    outline: none;
+    transition: .2s;
+    border-radius: 5px;    
+    background-color: transparent;
+    padding: 12px 24px;
+    color: #000;
+    z-index: 13;
+    margin-bottom: 10px;
+}
+
+.item__input.select
+{
+    color: #8C8C8C;
+}
+
+.item__input.select:focus
+{
+    border-color: #0358BB;
+    transition: .2s;
+}
+
+.item__input.select::-moz-placeholder
+{
+    color: #8C8C8C;
+}
+
+.item__input::-webkit-input-placeholder
+{
+    color: #8C8C8C;
+}
+
+.item__input:last-child,
+.item__input.select:last-child
+{
+    margin: 0;
+}
+
+.item__input_drop
+{
+    max-width: 100%;
+    width: 100%;
+    font: 14px/20px 'Gilroy', sans-serif;
+    color: #8C8C8C;
+}
+
+.info__textarea
+{
+    border: 1.5px solid #C4C4C4;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    padding: 16px 24px;
+    font: 14px/20px 'Gilroy', sans-serif;
+    color: #000;
+    resize: none;
+    transition: .2s;
+}
+
+.info__textarea:focus
+{
+    border-color: #0358BB;
+    transition: .2s;
+}
+
+.info__textarea::-moz-placeholder
+{
+    color: #8C8C8C;
+}
+
+.info__textarea::-webkit-input-placeholder
+{
+    color: #8C8C8C;
+}
+
+.feedback__submit
+{
+    margin: 0;
 }
