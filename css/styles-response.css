@@ -452,6 +452,16 @@
         background-color: #8C8C8C;
     }
 
+    .header__number
+    {
+        margin: 0px 10% 0px auto;
+    }
+
+    .header__icons
+    {
+        width: 20%;
+    }
+
     .heart
     {
         display: none;
