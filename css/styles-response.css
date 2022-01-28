@@ -50,12 +50,18 @@
 
     .wrapper__button_form
     {
-        max-width: 37%;
+        max-width: 350px;
     }
 
     .registration__popup
     {
         max-width: 31.4%;
+    }
+
+    .feedback__popup
+    {
+        max-width: 44.4%;
+        left: 28%;
     }
 }
 
@@ -68,7 +74,7 @@
 
     .wrapper__button_form
     {
-        max-width: 39%;
+        max-width: 350px;
     }
 
     .footer__scrollup
@@ -79,6 +85,12 @@
     .registration__popup
     {
         max-width: 36.7%;
+    }
+
+    .feedback__popup
+    {
+        max-width: 53.3%;
+        left: 25%;
     }
 }
 
@@ -141,7 +153,7 @@
 
     .wrapper__button_form
     {
-        max-width: 42%;
+        max-width: 50%;
     }
 
     .footer__scrollup
@@ -171,6 +183,12 @@
     .registration__popup
     {
         max-width: 40%;
+    }
+    
+    .feedback__popup
+    {
+        max-width: 58.2%;
+        left: 25%;
     }
 }
 
@@ -260,6 +278,12 @@
     {
         max-width: 44%;
     }
+
+    .feedback__popup
+    {
+        max-width: 64%;
+        left: 19%;
+    }
 }
 
 @media screen and (max-width: 999px)
@@ -313,6 +337,12 @@
     {
         font: 12px/18px 'Gilroy', sans-serif;
     }
+
+    .feedback__popup
+    {
+        max-width: 56.6%;
+        left: 22%;
+    }
 }
 
 @media screen and (max-width: 801px)
@@ -324,13 +354,13 @@
 
     .header__menu.active
     {
-        position: absolute;
-        top: -9px;
+        position: fixed;
+        top: 12px;
         display: flex;
         flex-direction: column;
         align-items: start;
         background-color: #fafafa;
-        max-width: 100%;
+        max-width: 96%;
         width: 100%;
         padding: 18px 10px;
         height: 100vh;
@@ -417,7 +447,7 @@
 
     .header__hamburger.active::after
     {
-        bottom: 50%;
+        bottom: 51%;
         transform: rotate(45deg) translate(0, 50%);
         background-color: #8C8C8C;
     }
@@ -528,6 +558,12 @@
         max-width: 100%;
         justify-content: center;
     }
+
+    .feedback__popup
+    {
+        max-width: 68.75%;
+        left: 17%;
+    }
 }
 
 @media screen and (max-width: 641px)
@@ -546,6 +582,11 @@
     {
         width: 20%;
     }
+
+    .header__menu.active
+    {
+        max-width: 97%;
+    }
     
     .header__number
     {
@@ -554,8 +595,8 @@
 
     .header__icons
     {
-        justify-content: space-evenly;
-        width: 30%;
+        justify-content: space-between;
+        width: 20%;
     }
 
     .icons__wrapper
@@ -659,6 +700,17 @@
         width: 100%;
         justify-content: center;
     }
+
+    .feedback__popup
+    {
+        max-width: 79.7%;
+        left: 10%;
+    }
+
+    .item__input
+    {
+        padding: 10px 15px;
+    }
 }
 
 @media screen and (max-width: 639px)
@@ -667,6 +719,7 @@
     {
         margin: 0 10px;
     }
+
     .main__info
     {
         margin-top: 15px;
@@ -1042,6 +1095,11 @@
         align-items: flex-start;
     }
 
+    .form__item
+    {
+        padding: 12px 0 12px 15px;
+    }
+
     .wrapper__button_form
     {
         max-width: 100%;
@@ -1061,8 +1119,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        font: 12px/20px 'Gilroy', sans-serif;
-        color: #1883FF;
     }
 
     .back__icon_popup
@@ -1071,12 +1127,79 @@
         width: 6px;
         height: 11px;
     }
+
+    .back__label
+    {        
+        font: 12px/20px 'Gilroy', sans-serif;
+        color: #1883FF;
+    }
+
+    .feedback__container
+    {
+        margin: 20px auto;
+    }
+
+    .feedback__popup
+    {
+        max-width: 93.75%;
+        left: 3%;
+    }
+
+    .form__info
+    {
+        margin-bottom: 20px;
+    }
+
+    .rate__title .title
+    {
+        font: 14px/20px 'Gilroy', sans-serif;
+    }
+
+    .rate__star
+    {
+        margin-bottom: 15px;
+        max-width: 65%;
+    }
+
+    .info__holder
+    {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .holder__item
+    {
+        max-width: 100%;
+    }
+
+    .item__input:last-child, .item__input.select:last-child
+    {
+        margin-bottom: 10px;
+    }
+
+    .info__textarea
+    {
+        padding: 10px 15px;
+    }
 }
 
 @media screen and (max-width: 481px)
 {
+    .header__menu.active
+    {
+        max-width: 96%;
+    }
+
     .footer__container
     {
         max-width: 87%;
     }    
+}
+
+@media screen and (max-width: 321px) 
+{
+    .header__menu.active
+    {
+        max-width: 94%;
+    }
 }

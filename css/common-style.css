@@ -1542,7 +1542,7 @@ input::-webkit-input-placeholder
 
 .wrapper__button_form
 {
-    max-width: 29%;
+    max-width: 350px;
     width: 100%;
 }
 
@@ -1610,6 +1610,7 @@ input::-webkit-input-placeholder
     right: 0;
     background-color: rgba(0,0,0,.8);
     z-index: 15000;
+    transition: .5s;
 }
 
 .wrapper__registration.active
@@ -1617,6 +1618,7 @@ input::-webkit-input-placeholder
     opacity: 1;
     visibility: visible;
     overflow: hidden;
+    transition: .5s;
 }
 
 .registration__popup
@@ -1934,9 +1936,9 @@ input::-webkit-input-placeholder
 
 .star__keeper
 {
-    max-width: 14.3%;
+    max-width: 10%;
     width: 100%;
-    height: 30px;
+    height: 20px;
     background: url(../images/nonfilled_star.svg) no-repeat;
     transition: .2s;
     cursor: pointer;
@@ -2015,7 +2017,7 @@ input::-webkit-input-placeholder
     color: #8C8C8C;
 }
 
-.item__input.select:focus
+.item__input:focus
 {
     border-color: #0358BB;
     transition: .2s;
@@ -2057,6 +2059,7 @@ input::-webkit-input-placeholder
     color: #000;
     resize: none;
     transition: .2s;
+    outline: none;
 }
 
 .info__textarea:focus
