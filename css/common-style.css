@@ -2125,7 +2125,8 @@ input::-webkit-input-placeholder
     margin-bottom: 15px;
 }
 
-.holder__item .container
+.holder__item .container_date,
+.holder__item .container_time
 {
     max-width: 100%;
     width: 100%;
@@ -2134,8 +2135,9 @@ input::-webkit-input-placeholder
     z-index: 15000;
 }
 
-.holder__item .container:last-child
+.holder__item .container_time
 {
+    z-index: 14999;
     margin: 0;
 }
 
@@ -2182,5 +2184,6 @@ input::-webkit-input-placeholder
 .holder__item .input-group-addon.datepickerbutton
 {
     border: none;
-    border-right: 1.5px solid #C4C4C4;;
+    border-right: 1.5px solid #C4C4C4;
+    cursor: pointer;
 }
