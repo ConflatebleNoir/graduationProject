@@ -27,6 +27,7 @@ $(document).ready(function () {
         variableWidth: false,
         rows: 1,
         slidesPerRow: 1,
+        lazyload: 'ondemand',
     });
 
 
@@ -73,6 +74,7 @@ $(document).ready(function () {
         variableWidth: false,
         rows: 1,
         slidesPerRow: 1,
+        lazyload: 'ondemand',
     });
 
 
@@ -116,6 +118,7 @@ $(document).ready(function () {
         variableWidth: false,
         rows: 1,
         slidesPerRow: 1,
+        lazyload: 'ondemand',
     });
 
 
@@ -159,6 +162,7 @@ $(document).ready(function () {
         variableWidth: false,
         rows: 1,
         slidesPerRow: 1,
+        lazyload: 'ondemand',
         responsive: [
             {
                 breakpoint: 1202,
@@ -206,6 +210,7 @@ $(document).ready(function () {
         variableWidth: false,
         rows: 1,
         slidesPerRow: 1,
+        lazyload: 'ondemand',
         responsive: [
             {
                 breakpoint: 500,
@@ -246,6 +251,7 @@ $(document).ready(function () {
         variableWidth: false,
         rows: 1,
         slidesPerRow: 1,
+        lazyload: 'ondemand',
     });
 });
 

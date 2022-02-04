@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/intlTelInput.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/demo-tel.css">
     <link rel="stylesheet" href="css/formats-slider.css">
     <link rel="stylesheet" href="css/feedbacks-slider.css">
@@ -16,7 +19,6 @@
     <link rel="stylesheet" href="css/main-slider.css">
     <link rel="stylesheet" href="css/common-style.css">
     <link rel="stylesheet" href="css/styles-response.css">
-
 </head>
 
 <body id="body" class="body">
@@ -128,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="wrapper__button">
-                                <button class="button__rent btn">Арендовать</button>
+                                <button class="button__rent button">Арендовать</button>
                             </div>
                         </div>
                     </div>
@@ -162,7 +164,7 @@
                         </div>
                     </div>
                     <div class="info__wrapper wrapper__button">
-                        <button class="button__rent btn">Арендовать</button>
+                        <button class="button__rent button">Арендовать</button>
                     </div>
                 </div>
                 <div id="format-switcher" class="info__container">
@@ -249,7 +251,7 @@
                                     <p class="reserve__info">3 офк.
                                         <span class="reserve__info__different">- 1 час</span>
                                     </p>
-                                    <button class="reserve__button btn">Бронировать</button>
+                                    <button id="reserve-btn-meeting" class="reserve__button button">Бронировать</button>
                                 </div>
                             </div>
                         </div>
@@ -332,7 +334,8 @@
                                     <p class="reserve__info">5 офк.
                                         <span class="reserve__info__different">- 1 час</span>
                                     </p>
-                                    <button class="reserve__button btn">Бронировать</button>
+                                    <button id="reserve-btn-flex-first"
+                                        class="reserve__button button">Бронировать</button>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +397,8 @@
                                     <p class="reserve__info">1 офк.
                                         <span class="reserve__info__different">- 1 час</span>
                                     </p>
-                                    <button class="reserve__button btn">Бронировать</button>
+                                    <button id="reserve-btn-flex-second"
+                                        class="reserve__button button">Бронировать</button>
                                 </div>
                             </div>
                         </div>
@@ -785,7 +789,7 @@
                         </div>
                     </div>
                     <div id="feedback-popup-opener" class="feedbacks__button">
-                        <button class="button__share btn">Оставить отзыв</button>
+                        <button class="button__share button">Оставить отзыв</button>
                     </div>
                 </div>
                 <div class="info__coworkings">
@@ -1163,7 +1167,7 @@
                         </div>
                     </div>
                     <div class="coworkings__button">
-                        <button class="button__spaces btn">
+                        <button class="button__spaces button">
                             Смотреть все коворкинги
                         </button>
                     </div>
@@ -1289,7 +1293,7 @@
                         </div>
                     </div>
                     <div class="wrapper__button_form">
-                        <button class="submit__button btn_footer" type="submit"
+                        <button class="submit__button button_footer" type="submit"
                             form="footer__form">Подключиться</button>
                     </div>
                 </div>
@@ -1456,12 +1460,93 @@
         </section>
     </div>
 
+    <div id="reserve-background" class="wrapper__reserve">
+        <section id="reserve-popup" class="reserve__popup">
+            <div class="reserve__container">
+                <form class="reserve__form" id="reserve-form" autocomplete="on" method="post">
+                    <div class="form__heading">
+                        <div id="reserve-back" class="popup__back-mobile">
+                            <img src="images/chevron-back.svg" alt="" class="back__icon_popup">
+                            <p class="back__label">Назад</p>
+                        </div>
+                        <h4 class="popup__title">Бронирование</h4>
+                        <button id="reserve-reset" class="reserve__reset reset__button" type="reset">Сбросить</button>
+                    </div>
+                    <div class="form__info">
+                        <div class="info__holder">
+                            <div class="holder__item">
+                                <label for="reserve-name"></label>
+                                <input id="reserve-name" type="text" class="item__input" placeholder="Ваше имя"
+                                    required>
+                                <label for="reserve-email"></label>
+                                <input id="reserve-email" type="email" class="item__input" placeholder="E-mail"
+                                    required>
+                                <label for="for-company"></label>
+                                <input class="item__input" id="reserve-phone" type="tel" name="reserve-phone" required>
+                            </div>
+                            <div class="holder__item">
+                                <div id="reserve-select-container" class="holder__item_wrapper">
+                                    <select class="item__input select" name="coworking" required>
+                                        <option class="item__input_drop" value="coworkingHolder" disabled selected>
+                                            Формат рабочего места
+                                        </option>
+                                        <option class="item__input_drop" value="gravitySpace">Нефиксированное место
+                                        </option>
+                                        <option class="item__input_drop" value="AtWork">Переговорная комната</option>
+                                    </select>
+                                    <img id="rotator-item-holder-reserve" class="select__arrow"
+                                        src="images/chevron-down-popup.svg" alt="arrow">
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6">
+                                            <div class="input-group date" id="datetimepicker6">
+                                                <span class="input-group-addon datepickerbutton">
+                                                    <img class="glyphicon glyphicon-calendar" src="images/calendar.svg"
+                                                        alt="">
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Дата аренды" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <div class="input-group time" id="datetimepicker2">
+                                                <span class="input-group-addon datepickerbutton">
+                                                    <img class="glyphicon glyphicon-calendar"
+                                                        src="images/clock-icon-reserve-popup.svg" alt="">
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Время аренды" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reserve__checkbox">
+                            <input id="reserve-checkbox" type="checkbox" class="checkbox">
+                            <label for="reserve-checkbox" class="checkbox__text" aria-required="true">
+                                Нажимая на кнопку «Забронировать», вы принимаете условия Пользовательского Соглашения
+                                и Политики Конфиденциальности
+                            </label>
+                        </div>
+                    </div>
+                    <button class="reserve__submit" type="submit">Забронировать</button>
+                </form>
+            </div>
+    </div>
+    </section>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/intlTelInput.min.js"></script>
     <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
     <script src="js/international_tel_footer.js"></script>
     <script src="js/international_tel_registration.js"></script>
+    <script src="js/international_tel-reserve.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/hider.js"></script>
     <script src="js/coworkings-hearts.js"></script>
@@ -1472,7 +1557,10 @@
     <script src="js/arrow-back.js"></script>
     <script src="js/rate-stars.js"></script>
     <script src="js/popups.js"></script>
-
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/calendar-time.js"></script>
 </body>
 
 </html>

@@ -279,7 +279,8 @@
         max-width: 44%;
     }
 
-    .feedback__popup
+    .feedback__popup,
+    .reserve__popup
     {
         max-width: 64%;
         left: 19%;
@@ -363,7 +364,7 @@
         max-width: 96%;
         width: 100%;
         padding: 18px 10px;
-        height: 100vh;
+        height: 70vh;
         justify-content: normal;
         border-radius: 5px;
     }
@@ -569,7 +570,8 @@
         justify-content: center;
     }
 
-    .feedback__popup
+    .feedback__popup,
+    .reserve__popup
     {
         max-width: 68.75%;
         left: 17%;
@@ -711,15 +713,16 @@
         justify-content: center;
     }
 
-    .feedback__popup
+    .feedback__popup,
+    .reserve__popup
     {
         max-width: 79.7%;
         left: 10%;
     }
 
-    .item__input
+    .item__input_label
     {
-        padding: 10px 15px;
+        margin: 0;
     }
 }
 

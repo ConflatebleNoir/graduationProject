@@ -87,3 +87,53 @@ feedbackBackground.addEventListener('click', (e) => {
         body.classList.remove('lock');
     };
 });
+
+const reservePopup = document.getElementById('reserve-popup');
+const reservePopupOpenerMeeting = document.getElementById('reserve-btn-meeting');
+const reservePopupOpenerFlexFirst = document.getElementById('reserve-btn-flex-first');
+const reservePopupOpenerFlexSecond = document.getElementById('reserve-btn-flex-second');
+const reservePopupBack = document.getElementById('reserve-back');
+
+const reserveBackground = document.getElementById('reserve-background');
+
+if (reservePopupOpenerMeeting) {
+    reservePopupOpenerMeeting.addEventListener("click", function () {
+        reservePopup.classList.add('active');
+        reserveBackground.classList.add('active');
+        body.classList.add('lock');
+    });
+};
+
+if (reservePopupOpenerFlexFirst) {
+    reservePopupOpenerFlexFirst.addEventListener("click", function () {
+        reservePopup.classList.add('active');
+        reserveBackground.classList.add('active');
+        body.classList.add('lock');
+    });
+};
+
+if (reservePopupOpenerFlexSecond) {
+    reservePopupOpenerFlexSecond.addEventListener("click", function () {
+        reservePopup.classList.add('active');
+        reserveBackground.classList.add('active');
+        body.classList.add('lock');
+    });
+};
+
+if (reservePopupBack) {
+    reservePopupBack.addEventListener("click", function () {
+        reservePopup.classList.remove('active');
+        reserveBackground.classList.remove('active');
+        body.classList.remove('lock');
+    });
+};
+
+reserveBackground.addEventListener('click', (e) => {
+    const withinBoundaries = e.composedPath().includes(reservePopup);
+
+    if (!withinBoundaries) {
+        reservePopup.classList.toggle('active'); // скрываем элемент т к клик был за его пределами
+        reserveBackground.classList.remove('active');
+        body.classList.remove('lock');
+    };
+});

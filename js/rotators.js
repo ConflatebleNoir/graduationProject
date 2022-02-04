@@ -43,3 +43,14 @@ if (rotatorFeedbackFormatForm) {
         rotatorFeedbackFormat.classList.toggle('active');
     });
 };
+
+// reserve format form rotator
+
+const rotatorReserveFormatForm = document.getElementById('reserve-select-container');
+const rotatorReserveFormat = document.getElementById('rotator-item-holder-reserve');
+
+if (rotatorReserveFormatForm) {
+    rotatorReserveFormatForm.addEventListener("click", function () {
+        rotatorReserveFormat.classList.toggle('active');
+    });
+};

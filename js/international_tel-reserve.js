@@ -1,8 +1,8 @@
-// registration pop-up international phone
+// reserve pop-up international phone
 
-let inputRegistration = document.querySelector('#registration-phone');
+let inputReserve = document.querySelector('#reserve-phone');
 
-let itiRegistration = window.intlTelInput(inputRegistration, {
+let itiReserve = window.intlTelInput(inputReserve, {
     initialCountry: "auto",
     geoLookup: function (success, failure) {
         axios({
