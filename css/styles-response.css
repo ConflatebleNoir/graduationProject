@@ -389,6 +389,11 @@
         margin-right: 10px;
     }
 
+    .menu__back .back
+    {
+        color: #1883FF;
+    }
+
     .header__hamburger
     {
         display: block;
