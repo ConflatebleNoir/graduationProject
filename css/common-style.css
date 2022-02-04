@@ -107,7 +107,9 @@ ul, ol
 .header__number:hover
 {
     font-size: 16px;
-    transition: .5s;
+    transition: .3s;
+    text-decoration: none;
+    color: #1883FF;
 }
 
 .header__icons
@@ -2189,4 +2191,39 @@ input::-webkit-input-placeholder
     border: none;
     border-right: 1.5px solid #C4C4C4;
     cursor: pointer;
+}
+
+.footer__form.hided
+{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: .3s;
+}
+
+.footer__accepted
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.accepted__icon,
+.accepted__description
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.accepted__description
+{
+    margin: 0;
+    font: 16px/24px 'Gilroy', sans-serif;
+    color: #fff;
+    text-align: center;
 }
