@@ -2155,7 +2155,6 @@ input::-webkit-input-placeholder
 
 .holder__item .container_time
 {
-    z-index: 14999;
     margin: 0;
 }
 
