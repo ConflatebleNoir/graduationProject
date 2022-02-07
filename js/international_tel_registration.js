@@ -13,5 +13,5 @@ let itiRegistration = window.intlTelInput(inputRegistration, {
             success(response.data.country);
         })
     },
-    utilsScript: 'js/utils.js'
+    utilsScript: 'utils.js'
 });

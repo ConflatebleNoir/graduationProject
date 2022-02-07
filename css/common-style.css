@@ -205,6 +205,7 @@ ul, ol
 {
     color: #000;
     transition: .3s;
+    text-decoration: none;
 }
 
 .info__slider
@@ -376,6 +377,12 @@ ul, ol
     text-transform: uppercase;
     margin-right: 22px;
     display: flex;    
+}
+
+.tools:hover
+{
+    color: #1883FF;
+    text-decoration: none;
 }
 
 .tools__share
@@ -1391,6 +1398,12 @@ ul, ol
 {
     color: #fff;
     text-decoration: none;
+}
+
+.list__item_footer-link:hover
+{
+    text-decoration: none;
+    color: #fff;
 }
 
 .list__item_footer-info

@@ -13,5 +13,5 @@ let itiReserve = window.intlTelInput(inputReserve, {
             success(response.data.country);
         })
     },
-    utilsScript: 'js/utils.js'
+    utilsScript: 'utils.js'
 });
