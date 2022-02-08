@@ -1,5 +1,24 @@
+@media screen and (max-width: 1500px)
+{
+    .info__tools
+    {
+        width: 21%;
+    }    
+}
+
 @media screen and (max-width: 1441px)
 {
+    .tools,
+    .description__text
+    {
+        font: 14px/20px 'Gilroy', sans-serif;
+    }
+
+    .info__tools
+    {
+        width: 26%;
+    } 
+
     .amenities__title
     {
         font: 500 20px/30px 'Gilroy', sans-serif;
@@ -289,6 +308,10 @@
 
 @media screen and (max-width: 999px)
 {
+    .info__tools
+    {
+        width: 29%;
+    }
 
     .above__logo
     {
@@ -502,7 +525,12 @@
     .info__other
     {
         max-width: 100%;
-    }    
+    }
+
+    .info__tools
+    {
+        width: 21%;
+    }
 
     .info__container
     {
@@ -650,6 +678,11 @@
     .info__other
     {
         margin-bottom: 95px;
+    }
+
+    .info__tools
+    {
+        width: 25%;
     }
 
     .heading
@@ -832,11 +865,20 @@
     .info__tools
     {
         margin-bottom: 30px;
+        width: 100%;
     }
 
     .wrapper__button
     {
         display: none;
+    }
+
+    .wrapper__button_tools
+    {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
     }
 
     .info__wrapper.wrapper__button

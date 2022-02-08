@@ -67,3 +67,16 @@ if (favoriteHeartFourth) {
         favoriteHeartFourth.classList.remove('active');
     });
 };
+
+// main fav/unfav
+
+const mainFav = document.getElementById('tools-heart-fav');
+const mainUnfav = document.getElementById('tools-heart-unfav');
+const mainHeartSwitcher = document.getElementById('tools-heart-switcher');
+
+if (mainHeartSwitcher) {
+    mainHeartSwitcher.addEventListener("click", function () {
+        mainFav.classList.toggle('active');
+        mainUnfav.classList.toggle('active');
+    });
+};

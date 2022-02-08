@@ -19,6 +19,11 @@ ul, ol
     padding: 0;
 }
 
+img
+{
+    vertical-align: unset;
+}
+
 .body
 {
     margin: 0;
@@ -309,6 +314,11 @@ ul, ol
     align-items: flex-end;
 }
 
+.wrapper__button_tools
+{
+    display: none;
+}
+
 .button__rent
 {
     padding: 10px;
@@ -367,6 +377,8 @@ ul, ol
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    max-width: 100%;
+    width: 19.5%;
 }
 
 .tools
@@ -376,7 +388,8 @@ ul, ol
     color: #1883FF;
     text-transform: uppercase;
     margin-right: 22px;
-    display: flex;    
+    display: flex;
+    align-items: center;
 }
 
 .tools:hover
@@ -388,6 +401,86 @@ ul, ol
 .tools__share
 {
     margin-right: 7px;
+}
+
+.tools__favorite
+{
+    position: relative;
+    cursor: pointer;
+    max-width: 100%;
+    width: 15%;
+}
+
+.unfavorite__co
+{
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+}
+
+.unfavorite__co.active
+{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.favorite__co.active
+{
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+    width: 25px;
+    height: 28px;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: .2s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.favorite__co
+{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.favorite__co-checked
+{
+    width: 13px;
+    height: 13px;
+    background-color: #1883FF;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.favorite__co-checked::after,
+.favorite__co-checked::before
+{
+    content : '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: #1883FF;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.favorite__co-checked::before
+{
+    top: -7px;
+    left: 0;
+}
+
+.favorite__co-checked::after
+{
+    top: 0;
+    left: -7px;
 }
 
 .info__wrapper.wrapper__button
@@ -2156,6 +2249,7 @@ input::-webkit-input-placeholder
 .holder__item .container_time
 {
     margin: 0;
+    z-index: 14999;
 }
 
 .holder__item .col-sm-6,
@@ -2238,4 +2332,9 @@ input::-webkit-input-placeholder
     font: 16px/24px 'Gilroy', sans-serif;
     color: #fff;
     text-align: center;
+}
+
+.bootstrap-datetimepicker-widget.bottom
+{
+    z-index: 15001;
 }
